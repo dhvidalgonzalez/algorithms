@@ -17,11 +17,11 @@ function moveEvenNumbersToFrontOfArray(array) {
   let j = array.length - 1;
 
   while (i < j) {
-    while (array[i] % 2 == 0) {
+    while (i < array.length && array[i] % 2 == 0) {
       i++;
     }
 
-    while (array[j] % 2 != 0) {
+    while (j >= 0 && array[j] % 2 != 0) {
       j--;
     }
 
@@ -29,6 +29,4 @@ function moveEvenNumbersToFrontOfArray(array) {
   }
 }
 
-let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-moveEvenNumbersToFrontOfArray(array);
-console.log("🚀 ~ file: moveEvenNumbersToFrontOfArray.js:34 ~ array:", array);
+module.exports = moveEvenNumbersToFrontOfArray;
